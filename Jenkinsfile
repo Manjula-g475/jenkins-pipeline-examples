@@ -28,18 +28,6 @@ pipeline {
       }
     }
 
-    // Unit Tests
-    stage('Unit Tests') {
-      agent {
-        label 'node'
-      }
-      steps {
-        deleteDir()
-        checkout scm
-        sh "echo 'Run Unit Tests'"
-      }
-    }
-
     // Acceptance Tests
     stage('Acceptance Tests') {
       agent {
